@@ -9,7 +9,14 @@ console.log("array cognomi: ", cognomi);
 
 // cognome utente da inserire
 var cognomeUtente = prompt("inserisci il cognome con la lettera maiuscola");
+
+// controllo lettera maiuscola
+while(cognomeUtente[0] != cognomeUtente[0].toUpperCase()){
+    cognomeUtente = prompt("ERRORE, inserisci il cognome con la lettera maiuscola");
+}
+// cognome inserito dall'utente
 console.log("cognome utente: ",cognomeUtente);
+
 // cognome utente inserito nell'array
 cognomi.push(cognomeUtente);
 
@@ -18,9 +25,8 @@ console.log("array cognomi modificato: ", cognomi);
 
 // ordina i cognomi in ordine alfabetico
 var cognomiOrdinati = cognomi.sort();
-
 // stampa cognomi in ordine alfabetico
-console.log("array cognomi: ", cognomiOrdinati);
+console.log("array cognomi ordinato: ", cognomiOrdinati);
 
 // stampa cognomi con posizione
 for(i=0; i < cognomi.length; i++) {
